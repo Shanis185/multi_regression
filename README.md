@@ -1,27 +1,27 @@
 # Ride-Sharing Fare Prediction: Trip Data Analysis and Regression Modeling
-Overview
+### Overview
 This project focuses on analyzing and predicting ride-sharing fare amounts for trips in a major metropolitan city, based on several key factors. Using a dataset of 2017 Ride-Sharing Trip Data, the goal was to build a predictive model to estimate the fare based on attributes such as trip distance, trip duration, passenger count, and toll amounts. The goal was to understand the relationships between these variables and use them to predict the fare accurately.
 
 Throughout this project, I applied various data science techniques such as data preprocessing, exploratory data analysis (EDA), handling outliers, feature engineering, and model evaluation. The primary objective was to create a model that can predict ride-sharing fares for real-world applications while ensuring the data is clean and ready for analysis.
 
-Dataset
+### Dataset
 The dataset used in this project is a modified version of the 2017 Ride-Sharing Trip Data, which includes the following key features:
 
-trip_distance: The distance traveled during the ride (in miles).
-duration: The duration of the ride (in minutes).
-fare_amount: The total fare for the ride.
-passenger_count: The number of passengers in the vehicle.
-tolls_amount: The total toll amount for the trip.
-pickup_datetime: The pickup time for the ride.
-dropoff_datetime: The drop-off time for the ride.
-Data Preprocessing
+#### trip_distance: The distance traveled during the ride (in miles).
+#### duration: The duration of the ride (in minutes).
+#### fare_amount: The total fare for the ride.
+#### passenger_count: The number of passengers in the vehicle.
+#### tolls_amount: The total toll amount for the trip.
+#### pickup_datetime: The pickup time for the ride.
+#### dropoff_datetime: The drop-off time for the ride.
+### Data Preprocessing
 The data was preprocessed to ensure it was clean and ready for modeling. This included:
 
 Converting the pickup_datetime and dropoff_datetime columns to the proper datetime format.
 Calculating the duration of each ride as the difference between the dropoff and pickup times.
 Handling outliers using the Interquartile Range (IQR) method for both the fare_amount and duration columns.
 Scaling the features using StandardScaler to ensure that the model’s performance was not affected by varying scales of data.
-Steps in the Project
+### Steps in the Project
 1. Data Preprocessing
 The dataset was initially cleaned using the following steps:
 
@@ -57,7 +57,7 @@ Residuals vs. Predicted Fare Amount: A scatter plot of residuals against predict
 7. Model Coefficients Interpretation
 The regression coefficients were analyzed to understand the relationship between each feature and the fare amount. The most significant features, such as trip_distance and duration, were found to have the most impact on fare predictions.
 
-Key Takeaways
+### Key Takeaways
 Feature Importance: The model revealed that trip_distance and duration are the most important predictors of fare in ride-sharing services.
 Model Performance: The linear regression model performed well, with an R² score of 0.868, meaning it explains 86.8% of the variance in the fare amount.
 Outlier Handling: Proper handling of outliers improved the model's accuracy by mitigating the influence of extreme values.
